@@ -1,0 +1,26 @@
+.draggable {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  cursor: grab;
+  display: inline-block;
+  position: absolute;
+  touch-action: none; /* Evita que el navegador maneje el scroll durante el drag */
+}
+
+.draggable__drag-btn {
+  cursor: grab;
+}
+
+.draggable__heading {
+  padding: 10px 10px;
+}
+
+.draggable__content {
+  padding: 10px 10px;
+}
+
+.draggable__content--minimized {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+}

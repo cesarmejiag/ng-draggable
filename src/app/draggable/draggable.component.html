@@ -1,0 +1,17 @@
+<div class="draggable" #container>
+  <div class="draggable__heading">
+    <button class="draggable__drag-btn" (mousedown)="startDrag($event)" (touchstart)="startDrag($event)">
+      Drag
+    </button>
+    <ng-container *ngIf="minimizable">
+      <button *ngIf="!minimized" (click)="minimize()">Minimize</button>
+      <button *ngIf="minimized" (click)="minimize()">Maximize</button>
+    </ng-container>
+  </div>
+  <div
+    class="draggable__content"
+    [ngClass]="{ 'draggable__content--minimized': minimized }"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>
